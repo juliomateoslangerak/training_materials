@@ -1,0 +1,10 @@
+version: "1"
+
+services:
+
+  camera_0:
+    image: "python:3.9-alpine"
+#    platform:
+    networks:
+      - microscope
+
