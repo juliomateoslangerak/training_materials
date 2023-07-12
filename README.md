@@ -1,2 +1,2 @@
-# training_materials
-Training materials for python-microscope
+# Training materials
+This repository groups some trainng materials that can be used for demoing purposes
