@@ -3,7 +3,7 @@ LABEL authors="Julio Mateos Langerak"
 
 WORKDIR /app
 COPY requirements.txt requirements.txt
-COPY camera_server_conf.py camera_server_conf.py
+COPY server_conf_camera_0.py camera_server_conf.py
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8000
