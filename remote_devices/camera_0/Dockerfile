@@ -5,9 +5,9 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 COPY server_conf_camera_0.py server_conf_camera_0.py
 RUN pip install --upgrade pip
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
-ENV PYRO_SERIALIZERS_ACCEPTED=pickle
+ENV PYRO_SERIALIZER=pickle
 
 EXPOSE 8000
 

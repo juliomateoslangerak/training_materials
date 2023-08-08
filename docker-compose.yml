@@ -1,32 +1,31 @@
-version: "1"
+version: "2"
 
 services:
 
   camera_0:
     privileged: false  # true in example
     restart: always
-    build: container_camera_0.yml
-    image: "python:3.9-alpine"
-#    platform:
-#    networks:
-#      - microscope_network
+    build: remote_devices/camera_0
+    networks:
+      - microscope_network
 
-#version: '2' services:
-#     pyro-ns:
-#         privileged: true
-#         restart: always
-#         build: ./pyro-ns
-#         ports: - "9090:9090"
-#     container_A:
-#         privileged: true
-#         restart: always
-#         build: ./container_A
-#         depends_on:
-#             - pyro-ns
-#             - container_B
-#     container_B:
-#         privileged: true
-#         restart: always
-#         build: ./container_B
-#         depends_on:
-#             - pyro-ns
+  light_0:
+    privileged: false
+    restart: always
+    build: remote_devices/light_0
+    networks:
+      - microscope_network
+
+  microscope_jupyter:
+#    privileged: false
+#    restart: always
+    build: training_environments/remote_control
+    networks:
+      - microscope_network
+    ports:
+      - "8888:8888"
+
+networks:
+  microscope_network:
+    name: microscope_network
+#    driver: bridge
