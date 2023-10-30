@@ -7,4 +7,4 @@ pyserial==3.5
 scipy==1.11.1
 serpent==1.41
 matplotlib==3.8.0
-microscope @ git+https://github.com/python-microscope/microscope.git@a921847ae80d51d451a2e73af3b68070479c42b2
+microscope @ git+https://github.com/python-microscope/microscope.git
