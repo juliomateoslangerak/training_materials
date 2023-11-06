@@ -8,3 +8,7 @@ scipy==1.11.1
 serpent==1.41
 matplotlib==3.8.0
 microscope @ git+https://github.com/python-microscope/microscope.git
+
+jupyter
+jupyter-repo2docker
+ffmpeg-python
